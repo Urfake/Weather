@@ -18,7 +18,7 @@
         android:id="@+id/night"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/noon_city"
+        android:src="@drawable/cloud"
         android:scaleType="centerCrop"
         android:layout_alignParentTop="true"
         android:visibility="gone"/>
