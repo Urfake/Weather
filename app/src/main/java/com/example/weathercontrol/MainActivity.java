@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 sunrise.setText(response.body().getForecast().getForecastdays().get(0).getAstro().getSunrise());
                 sunset.setText(response.body().getForecast().getForecastdays().get(0).getAstro().getSunset());
                 cloud.setText(response.body().getCurrent().getCloud() + "%");
-                if(response.body().getCurrent().getTemp_c() < 10) {
+                if(response.body().getCurrent().getTemp_c() < 15) {
                     noon.setVisibility(View.GONE);
                     night.setVisibility(View.VISIBLE);
                 } else {
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                             sunrise.setText(response.body().getForecast().getForecastdays().get(0).getAstro().getSunrise());
                             sunset.setText(response.body().getForecast().getForecastdays().get(0).getAstro().getSunset());
                             cloud.setText(response.body().getCurrent().getCloud() + "%");
-                            if (response.body().getCurrent().isDay() == 0) {
+                            if (response.body().getCurrent().getTemp_c() < 15) {
                                 noon.setVisibility(View.GONE);
                                 night.setVisibility(View.VISIBLE);
                             } else {
